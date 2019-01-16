@@ -50,6 +50,7 @@ table {
 
 //Variables
 @maingray: #E9ECEF;
+@skill-border: 1px solid #D5D8DB;
 
 
 //Mixins
@@ -141,6 +142,95 @@ html, body {
 			border-radius: 10px;
 		
 		}
-
 	}
+}
+
+.container {
+	.details {
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+		padding-top:30px;
+
+		.listen-up {
+			width: 50%;
+			display: flex;
+			flex-flow: column nowrap;
+
+			h2 {
+				font-size: 2rem;
+				padding-bottom: 20px;
+			}
+		}
+		.skills {
+			width: 50%;
+			.main-align;
+
+			h2 {
+				font-size: 2rem;
+				padding-bottom: 10px;
+			}
+
+			ul {
+				width: 100%;
+			}
+
+			li {
+				border-bottom: @skill-border;
+				border-left: @skill-border;
+				border-right: @skill-border;
+				padding: 10px 0px 10px 10px;
+				
+			}
+			#top-skill {
+				border-top: @skill-border;
+				border-left: @skill-border;
+				border-right: @skill-border;
+			}
+		}
+	}
+}
+
+.container {
+	.work-history {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-evenly;
+		margin-top:40px;
+
+	.label {
+		border-top: @skill-border;
+	}
+
+	.row1, .row3 {
+		background-color: #F2F2F2;
+	}
+
+	.work-table {
+		border-bottom: @skill-border;
+		width:100%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		// align-items: flex-start;
+
+		h3,h4 {
+			margin: 10px auto;
+			width: 32%;
+			}
+		h3 {
+			font-weight: bold;
+			}
+		}
+	}
+}
+
+
+footer {
+	padding-top: 20px;
+	padding-bottom: 40px;
+	color: white;
+	text-align: center;
+	background-color: #808080;
+	margin-top: 40px;
 }
