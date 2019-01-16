@@ -48,6 +48,26 @@ table {
 	border-spacing: 0;
 }
 
+//Variables
+@maingray: #E9ECEF;
+
+
+//Mixins
+
+.header-align {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.main-align {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	align-items: flex-start
+}
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
@@ -55,6 +75,48 @@ table {
 
 html, body {
 	height: 100%;
-	background-color: red;
 }
+
+.container {
+	margin: 20px 40px;
+	font-family: sans-serif;
+	color: black;
+	 header {
+		.header-align;
+		height: 80px;
+
+		a {
+			margin: 0 15px;
+			text-decoration: none;
+			color: black;
+		}
+	}
+}
+
+.container {
+	main {
+		background-color: @maingray;
+		.main-align;
+
+		.top-main {
+			.main-align;
+			width: 100%;
+			border-bottom: 1px solid #D5D8DB;
+			padding: 60px 40px 20px 40px;
+
+		h1 {
+			font-size: 50px;
+		}
+		h3 {
+			font-size:20px;
+			padding-bottom: 20px;
+		}
+		
+		img, h1, h3 {
+			margin: 10px 0;
+			}		
+		}
+	}
+}
+
 
