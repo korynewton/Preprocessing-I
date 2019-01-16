@@ -138,6 +138,11 @@ table {
   justify-content: space-evenly;
   align-items: flex-start;
 }
+.mobile-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -158,10 +163,25 @@ body {
   align-items: center;
   height: 80px;
 }
+@media (max-width: 500px) {
+  .container header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .container header a {
   margin: 0 15px;
   text-decoration: none;
   color: black;
+}
+@media (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 5px 10px;
+    width: 100%;
+  }
 }
 .container main {
   background-color: #E9ECEF;
@@ -186,10 +206,23 @@ body {
   font-size: 20px;
   padding-bottom: 20px;
 }
-.container main .top-main img,
 .container main .top-main h1,
 .container main .top-main h3 {
   margin: 10px 0;
+}
+.container main .top-main a,
+.container main .top-main img {
+  padding-bottom: 0;
+}
+@media (max-width: 500px) {
+  .container main .top-main a,
+  .container main .top-main img {
+    width: 80%;
+  }
+}
+.container main .top-main a:hover {
+  border: 5px solid black;
+  border-radius: 5px;
 }
 .container main .bottom-main {
   margin-top: 30px;
@@ -204,12 +237,20 @@ body {
   margin-bottom: 20px;
 }
 .container main button {
-  height: 50px;
+  height: 70px;
   color: white;
   width: 200px;
   background-color: #808080;
   font-size: 1.5rem;
   border-radius: 10px;
+}
+.container main button a {
+  color: white;
+  text-decoration: none;
+}
+.container main button:hover {
+  border: 5px solid black;
+  border-radius: 5px;
 }
 .container .details {
   display: flex;
@@ -217,10 +258,23 @@ body {
   width: 100%;
   padding-top: 30px;
 }
+@media (max-width: 500px) {
+  .container .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+}
 .container .details .listen-up {
   width: 50%;
   display: flex;
   flex-flow: column nowrap;
+}
+@media (max-width: 500px) {
+  .container .details .listen-up {
+    margin-bottom: 20px;
+  }
 }
 .container .details .listen-up h2 {
   font-size: 2rem;

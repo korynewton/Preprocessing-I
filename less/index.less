@@ -66,7 +66,13 @@ table {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-evenly;
-	align-items: flex-start
+	align-items: flex-start;
+}
+
+.mobile-centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Set every element's box-sizing to border-box */
@@ -86,11 +92,22 @@ html, body {
 		.header-align;
 		height: 80px;
 
+		@media (max-width: 500px) {
+			.mobile-centered;
+		}
+
 		a {
 			margin: 0 15px;
 			text-decoration: none;
 			color: black;
 		}
+	}
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-flow: column nowrap;
+		margin: 5px 10px;
+		width: 100%;
 	}
 }
 
@@ -113,9 +130,20 @@ html, body {
 			padding-bottom: 20px;
 		}
 		
-		img, h1, h3 {
+		h1, h3 {
 			margin: 10px 0;
-			}		
+			}
+		a,img {
+			padding-bottom: 0;
+
+			@media (max-width: 500px) {
+				width: 80%;
+			}
+		}	
+		a:hover {
+			border: 5px solid black;
+			border-radius: 5px;
+		}	
 		}
 	}
 }
@@ -134,12 +162,24 @@ html, body {
 		}
 
 		button {
-			height: 50px;
+			height: 70px;
 			color: white;
 			width:200px;
 			background-color: #808080;
 			font-size:1.5rem;
 			border-radius: 10px;
+
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+
+		
+		}
+		button:hover {
+			border: 5px solid black;
+			border-radius: 5px;
 		
 		}
 	}
@@ -152,16 +192,27 @@ html, body {
 		width: 100%;
 		padding-top:30px;
 
+		@media (max-width: 500px) {
+			.mobile-centered;
+			flex-flow: column nowrap;
+		}
+
 		.listen-up {
 			width: 50%;
 			display: flex;
 			flex-flow: column nowrap;
+
+			@media (max-width: 500px) {
+				margin-bottom: 20px;
+			}
+
 
 			h2 {
 				font-size: 2rem;
 				padding-bottom: 20px;
 			}
 		}
+
 		.skills {
 			width: 50%;
 			.main-align;
@@ -182,11 +233,14 @@ html, body {
 				padding: 10px 0px 10px 10px;
 				
 			}
+
+			
 			#top-skill {
 				border-top: @skill-border;
 				border-left: @skill-border;
 				border-right: @skill-border;
 			}
+			
 		}
 	}
 }
