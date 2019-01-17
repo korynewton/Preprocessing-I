@@ -1,1 +1,343 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.header-align {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main-align {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.mobile-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  margin: 20px 40px;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+}
+.container header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+}
+@media (max-width: 500px) {
+  .container header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.container header a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 5px 10px;
+    width: 100%;
+  }
+}
+.container main {
+  background-color: #E9ECEF;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.container main .top-main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  border-bottom: 1px solid #D5D8DB;
+  padding: 60px 40px 20px 40px;
+}
+.container main .top-main h1 {
+  font-size: 50px;
+}
+.container main .top-main h3 {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.container main .top-main h1,
+.container main .top-main h3 {
+  margin: 10px 0;
+}
+.container main .top-main a,
+.container main .top-main img {
+  padding-bottom: 0;
+}
+@media (max-width: 500px) {
+  .container main .top-main a,
+  .container main .top-main img {
+    width: 80%;
+  }
+}
+.container main .top-main a:hover {
+  border: 5px solid black;
+  border-radius: 5px;
+}
+.container main .bottom-main {
+  margin-top: 30px;
+  padding: 10px 40px 100px 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.container main p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+.container main button {
+  height: 70px;
+  color: white;
+  width: 200px;
+  background-color: #808080;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+.container main button a {
+  color: white;
+  text-decoration: none;
+}
+.container main button:hover {
+  border: 5px solid black;
+  border-radius: 5px;
+}
+.container .details {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  padding-top: 30px;
+}
+@media (max-width: 500px) {
+  .container .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+}
+.container .details .listen-up {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media (max-width: 500px) {
+  .container .details .listen-up {
+    margin-bottom: 20px;
+  }
+}
+.container .details .listen-up h2 {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+.container .details .skills {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.container .details .skills h2 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+.container .details .skills ul {
+  width: 100%;
+}
+.container .details .skills li {
+  border-bottom: 1px solid #D5D8DB;
+  border-left: 1px solid #D5D8DB;
+  border-right: 1px solid #D5D8DB;
+  padding: 10px 0px 10px 10px;
+}
+.container .details .skills #top-skill {
+  border-top: 1px solid #D5D8DB;
+  border-left: 1px solid #D5D8DB;
+  border-right: 1px solid #D5D8DB;
+}
+.container .work-history {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.container .work-history .label {
+  border-top: 1px solid #D5D8DB;
+}
+.container .work-history .row1,
+.container .work-history .row3 {
+  background-color: #F2F2F2;
+}
+.container .work-history .work-table {
+  border-bottom: 1px solid #D5D8DB;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.container .work-history .work-table h3,
+.container .work-history .work-table h4 {
+  margin: 10px auto;
+  width: 32%;
+}
+.container .work-history .work-table h3 {
+  font-weight: bold;
+}
+footer {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: white;
+  text-align: center;
+  background-color: #808080;
+  margin-top: 40px;
+}
